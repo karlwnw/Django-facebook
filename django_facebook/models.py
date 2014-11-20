@@ -524,7 +524,7 @@ class OpenGraphShare(BaseModel):
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
 
     class Meta:
-        db_table = facebook_settings.FACEBOOK_OG_SHARE_DB_TABLE
+        db_table = 'open_graph_share'
 
     def save(self, *args, **kwargs):
         if self.user and not self.facebook_user_id:
